@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body{
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(233, 47%, 7%);
+    color: hsl(0, 0%, 100%);
+}
+
+.card-container {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 90vh;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.container{
+    display: flex;
+    min-width: 400px;
+}
+/* Text-side styling */
+.page-info{
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 20px 0 0 20px;
+    padding: 70px;
+    width: 45%;
+}
+
+.page-info h1{
+    font-size: 30px;
+}
+
+.page-info .highlighted-text{
+    color: hsl(277, 64%, 61%);
+}
+
+.page-info p{
+    width: 350px;
+    opacity: 0.6;
+}
+
+.page-info ul{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-left: -40px;
+    padding-top: 100px;
+}
+
+.page-info ul li {
+    list-style-type: none;
+}
+
+.page-info .number-served{
+    font-size: 20px;
+}
+
+.page-info .type{
+    font-family: "Lexend Deca";
+    font-size: 12px;
+    font-style: normal;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+
+/* Image container styling */
+
+.image-container{
+    border-radius: 0 20px 20px 0 ;
+    position: relative;
+}
+
+.image-container::after{
+    content: '';
+    background: hsl(277, 64%, 61%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    border-radius: 0 20px 20px 0;
+}
+
+ .image{
+    border-radius: 0 20px 20px 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 1200px){  
+
+    .card-container {
+        
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .container{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .image{
+        height: 100%;
+    }
+
+    .image-container{
+        border-radius: 20px 20px 0 0;
+        height: 400px;
+    }
+
+    .image,
+    .image-container::after{
+        border-radius: 20px 20px 0 0;
+    }
+
+    .page-info{
+        width: auto;
+        border-radius: 0 0 20px 20px;
+    }
+    .page-info p {
+        text-align: center;
+        width: auto;
+    }
+
+    .page-info h1{
+        text-align: center;
+        margin-top: -10px;
+        margin-bottom: 50px;
+    }
+
+    .page-info ul {
+        width: auto;
+        padding-top: 75px;
+    
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .page-info h1{
+        text-align: center;
+    }
+
+    .page-info p {
+        
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
